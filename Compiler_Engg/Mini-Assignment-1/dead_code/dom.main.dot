@@ -1,0 +1,5 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x56058c854cd0 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  store i32 10, ptr %2, align 4\l  store i32 20, ptr %3, align 4\l  %7 = load i32, ptr %2, align 4\l  %8 = load i32, ptr %3, align 4\l  %9 = add nsw i32 %7, %8\l  store i32 %9, ptr %4, align 4\l  %10 = load i32, ptr %4, align 4\l  store i32 %10, ptr %6, align 4\l  %11 = load i32, ptr %4, align 4\l  %12 = add nsw i32 %11, 100\l  store i32 %12, ptr %5, align 4\l  %13 = load i32, ptr %5, align 4\l  %14 = call i32 (ptr, ...) @printf(ptr noundef @.str, i32 noundef %13)\l  %15 = call i32 (ptr, ...) @printf(ptr noundef @.str.1)\l  ret i32 0\l}"];
+}

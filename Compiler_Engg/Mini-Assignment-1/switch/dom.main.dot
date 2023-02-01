@@ -1,0 +1,13 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x55db1cb48d00 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  %5 = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  %6 = call i32 (ptr, ...) @__isoc99_scanf(ptr noundef @.str.1, ptr noundef %2)\l  %7 = load i32, ptr %2, align 4\l  switch i32 %7, label %12 [\l    i32 1, label %8\l    i32 2, label %10\l  ]\l}"];
+	Node0x55db1cb48d00 -> Node0x55db1cb6e270;
+	Node0x55db1cb48d00 -> Node0x55db1cb6e2d0;
+	Node0x55db1cb48d00 -> Node0x55db1cb6e330;
+	Node0x55db1cb48d00 -> Node0x55db1cb6e390;
+	Node0x55db1cb6e270 [shape=record,label="{%12:\l12:                                               \l  %13 = call i32 (ptr, ...) @printf(ptr noundef @.str.4)\l  br label %14\l}"];
+	Node0x55db1cb6e2d0 [shape=record,label="{%14:\l14:                                               \l  ret i32 0\l}"];
+	Node0x55db1cb6e330 [shape=record,label="{%8:\l8:                                                \l  %9 = call i32 (ptr, ...) @printf(ptr noundef @.str.2)\l  br label %14\l}"];
+	Node0x55db1cb6e390 [shape=record,label="{%10:\l10:                                               \l  %11 = call i32 (ptr, ...) @printf(ptr noundef @.str.3)\l  br label %14\l}"];
+}

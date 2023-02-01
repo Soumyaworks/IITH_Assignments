@@ -1,0 +1,11 @@
+digraph "Dominator tree for 'main' function" {
+	label="Dominator tree for 'main' function";
+
+	Node0x5566b1d35e70 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca [6 x i32], align 16\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  call void @llvm.memcpy.p0.p0.i64(ptr align 16 %2, ptr align 16\l... @__const.main.array, i64 24, i1 false)\l  store i32 6, ptr %3, align 4\l  store i32 488, ptr %4, align 4\l  %6 = getelementptr inbounds [6 x i32], ptr %2, i64 0, i64 0\l  %7 = load i32, ptr %3, align 4\l  %8 = sub nsw i32 %7, 1\l  %9 = load i32, ptr %4, align 4\l  %10 = call i32 @binarySearch(ptr noundef %6, i32 noundef 0, i32 noundef %8,\l... i32 noundef %9)\l  store i32 %10, ptr %5, align 4\l  %11 = load i32, ptr %5, align 4\l  %12 = icmp eq i32 %11, -1\l  br i1 %12, label %13, label %15\l}"];
+	Node0x5566b1d35e70 -> Node0x5566b1d327b0;
+	Node0x5566b1d35e70 -> Node0x5566b1d32810;
+	Node0x5566b1d35e70 -> Node0x5566b1d32870;
+	Node0x5566b1d327b0 [shape=record,label="{%13:\l13:                                               \l  %14 = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  br label %18\l}"];
+	Node0x5566b1d32810 [shape=record,label="{%18:\l18:                                               \l  ret i32 0\l}"];
+	Node0x5566b1d32870 [shape=record,label="{%15:\l15:                                               \l  %16 = load i32, ptr %5, align 4\l  %17 = call i32 (ptr, ...) @printf(ptr noundef @.str.1, i32 noundef %16)\l  br label %18\l}"];
+}

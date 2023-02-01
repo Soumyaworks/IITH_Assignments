@@ -1,0 +1,11 @@
+digraph "Dominator tree for 'factorial' function" {
+	label="Dominator tree for 'factorial' function";
+
+	Node0x55e19be31d00 [shape=record,label="{%1:\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  store i32 %0, ptr %3, align 4\l  %4 = load i32, ptr %3, align 4\l  %5 = icmp eq i32 %4, 1\l  br i1 %5, label %6, label %8\l}"];
+	Node0x55e19be31d00 -> Node0x55e19be574d0;
+	Node0x55e19be31d00 -> Node0x55e19be57530;
+	Node0x55e19be31d00 -> Node0x55e19be57590;
+	Node0x55e19be574d0 [shape=record,label="{%6:\l6:                                                \l  %7 = load i32, ptr %3, align 4\l  store i32 %7, ptr %2, align 4\l  br label %14\l}"];
+	Node0x55e19be57530 [shape=record,label="{%14:\l14:                                               \l  %15 = load i32, ptr %2, align 4\l  ret i32 %15\l}"];
+	Node0x55e19be57590 [shape=record,label="{%8:\l8:                                                \l  %9 = load i32, ptr %3, align 4\l  %10 = load i32, ptr %3, align 4\l  %11 = sub nsw i32 %10, 1\l  %12 = call i32 @factorial(i32 noundef %11)\l  %13 = mul nsw i32 %9, %12\l  store i32 %13, ptr %2, align 4\l  br label %14\l}"];
+}
